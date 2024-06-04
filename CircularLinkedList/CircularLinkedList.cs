@@ -185,7 +185,14 @@ namespace CircularLinkedList
                                 Console.WriteLine($"Changed value at index {counter} from 1 to 0");
                                 currNode.value = 0;
                                 currNode = currNode.next;
-                                counter++;
+                                if (counter == capacity - 1)
+                                {
+                                    counter = 0;
+                                }
+                                else
+                                {
+                                    counter++;
+                                }
                             }
                             Console.WriteLine($"Changed value at index {counter} from 0 to 1");
                             currNode.value = 1;
